@@ -300,7 +300,7 @@ direction: rtl;
             transition: 0.4s;
         }
         .o1_footer_div_end1 .ul_icon .li_footer .a_footer:hover {
-color: #014c51;
+color: #407BFF;
         }
             .o1_footer_div_end1 .ul_icon .li_footer .a_footer:hover {
                 transform: translateY(-10px);
@@ -386,7 +386,8 @@ color: white;
 
 
 .o1_footer_a_end a:hover{
-    color: #014c51;
+    color: #407BFF;
+    text-shadow: 50px #407BFF;
     transition: 0.3s;
 }
 
