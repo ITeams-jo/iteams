@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="fav.png" >
+    <meta name="keywords" content="ITeams,iteams,العقبه,العقبة,jordan aqaba,الجامعه الاردنية العقبة,كلية تكنلوجيا المعلومات العقبه ,الجامعه الاردنية كلية it,حاسبة المعدل">
+    <meta name="description" content="iteams ITeams">
+    <title>ITeams</title>
+    <style>
+      table { margin: 0 auto; border: 2px solid rgb(255, 255, 255); border-radius: 50px; padding: 40px}
+    table tr,td,th{
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px; 
+    }
+    th, td,th { padding: 10px; }
+    </style>
+</head>
+<body>
+  <div class="color11">
+<header  id="o1_header">
+                                        <a href="index.html" class="logo">
+                                            <img src="iteams-removebg-preview.png" alt="icon"  width="95px" style="padding-top: 25px;">
+
+                                          ITeams</a>
+<div class="menu"></div>
+<nav>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="2.html">المواد الدراسية</a></li>
+        <li><a href="3.html"  style="color: rgb(255, 255, 255);">حساب المعدل</a></li>
+        <li><a href="4.html">ايميلات الدكاترة</a></li>
+        <li><a href="5.html">معلومات للطالب</a></li>
+        <li><a> الخطط الدراسية <i class='bx bx-chevron-down'></i></a>
+            <ul>
+                <li><a href="شجرة المواد لبرنامج تكنولوجيا معلومات الاعمال.pdf">BIT</a></li>
+                <li><a href="شجرة المواد لبرنامج أنظمة المعلومات الحاسوبية-1 (1).pdf">CIS</a></li>
+                <li><a href="cys.pdf">CYS</a></li>
+            </ul>
+    </li>
+    </ul>
+</nav>
+
+</header>
+</div>
+<script>
+    let menu = document.querySelector('.menu');
+    let header = document.querySelector('header');
+    menu.onclick = function(){
+        header.classList.toggle('active');
+    }
+</script>
+<!-- =================================================== -->
+
+
+  
+<section class="o3_calc">
+
+   
+
+<br>
+<h1>حساب المعدل الفصلي والتراكمي</h1>
+<br>
+<br>
+<br>
+
+   
+      <h2>حساب المعدل الفصلي</h2>
+   
+
+<table id="o3_table" >
+ 
+    <tr>
+        <th>الدرجة</th>
+        <th>عدد الساعات</th>
+        <th>إزالة</th>
+    </tr>
+    <tr>
+        <td>
+            <select name="grade" class="grade">
+                <option value="4">أ</option>
+                <option value="3.75">أ-</option>
+                <option value="3.5">ب+</option>
+                <option value="3">ب</option>
+                <option value="2.75">ب-</option>
+                <option value="2.5">ج+</option>
+                <option value="2">ج</option>
+                <option value="1.75">ج-</option>
+                <option value="1.5">د+</option>
+                <option value="1">د</option>
+                <option value="0.75">د-</option>
+                <option value="0">هـ</option>
+            </select>
+        </td>
+        <td><input type="number" name="hours" class="hours" value="3" ></td>
+        <td><button type="button" class="remove-btn" onclick="removeRow(this)">حذف</button></td>
+    </tr>
+    
+</table>
+<div class="o3button">
+  <button type="button" onclick="addRow()">إضافة مادة جديدة</button>
+</div>
+<div class="o3_next">
+
+
+<h2>حساب المعدل التراكمي</h2>
+<br>
+<br>
+<div class="o3_input">
+<label for="currentGpa">المعدل التراكمي السابق : </label>
+<br>
+<input type="number" id="currentGpa" step="0.01" value="0">
+<br>
+<br>
+<label for="totalHours"> عدد الساعات السابقة : </label>
+<br>
+<input type="number" id="totalHours" value="0"><br>
+<br>
+<br>
+<button class="o3_button2" type="button" onclick="calculateGpa()">احسب المعدل</button>
+</div>
+</div>
+<!-- ====================================== -->
+<!-- ====================================== -->
+<!-- نافذة منبثقة -->
+<div id="gpaModal" class="modal">
+    <div class="modal-content">
+        <h2 style="color: black;">نتيجة الحساب</h2>
+        <br>
+        <p class="o3_pp">المعدل الفصلي: <span id="gpa">0</span></p>
+        <br>
+        <p class="o3_pp">المعدل التراكمي الجديد: <span id="cumulativeGpa">0</span></p>
+        <br>
+        <p class="o3_pp">التقدير: <span id="gradeLabel">امتياز</span></p>
+        <br>
+        <button class="o3_close_button" onclick="closeModal()">إغلاق</button>
+    </div>
+</div>
+<!-- ================================ -->
+<script>
+    function addRow() {
+        const table = document.getElementById("o3_table");
+        const row = table.insertRow();
+        row.innerHTML = `<td>
+                             <select name="grade" class="grade">
+                                 <option value="4">أ</option>
+                                 <option value="3.75">أ-</option>
+                                 <option value="3.5">ب+</option>
+                                 <option value="3">ب</option>
+                                 <option value="2.75">ب-</option>
+                                 <option value="2.5">ج+</option>
+                                 <option value="2">ج</option>
+                                 <option value="1.75">ج-</option>
+                                 <option value="1.5">د+</option>
+                                 <option value="1">د</option>
+                                 <option value="0.75">د-</option>
+                                 <option value="0">هـ</option>
+                             </select>
+                         </td>
+                         <td><input type="number" name="hours" class="hours" value="3"></td>
+                         <td><button type="button" class="remove-btn" onclick="removeRow(this)">حذف</button></td>`;
+    }
+
+    function removeRow(button) {
+        const row = button.parentElement.parentElement;
+        row.remove();
+    }
+
+    function calculateGpa() {
+        const rows = document.querySelectorAll("#o3_table tr");
+        let totalPoints = 0;
+        let totalHours = 0;
+
+        rows.forEach((row, index) => {
+            if (index === 0) return; // تخطي صف العنوان
+            const grade = parseFloat(row.querySelector(".grade").value);
+            const hours = parseFloat(row.querySelector(".hours").value);
+            totalPoints += grade * hours;
+            totalHours += hours;
+        });
+
+        const gpa = totalHours > 0 ? totalPoints / totalHours : 0;
+        document.getElementById("gpa").textContent = gpa.toFixed(2);
+
+        // حساب المعدل التراكمي
+        const currentGpa = parseFloat(document.getElementById("currentGpa").value);
+        const previousHours = parseFloat(document.getElementById("totalHours").value);
+        const newCumulativeGpa = (currentGpa * previousHours + gpa * totalHours) / (previousHours + totalHours);
+        document.getElementById("cumulativeGpa").textContent = isNaN(newCumulativeGpa) ? '0' : newCumulativeGpa.toFixed(2);
+
+        // تحديث التقدير بناءً على المعدل التراكمي
+        const gradeLabel = document.getElementById("gradeLabel");
+        if (newCumulativeGpa >= 3.65) {
+            gradeLabel.textContent = 'امتياز';
+        } else if (newCumulativeGpa >= 3.00) {
+            gradeLabel.textContent = 'جيد جداً';
+        } else if (newCumulativeGpa >= 2.50) {
+            gradeLabel.textContent = 'جيد';
+        } else if (newCumulativeGpa >= 2.00) {
+            gradeLabel.textContent = 'مقبول';
+        } else {
+            gradeLabel.textContent = 'ضعيف';
+        }
+
+        // عرض النافذة المنبثقة
+        document.getElementById("gpaModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("gpaModal").style.display = "none";
+    }
+</script>
+
+
+
+</section>
+<!-- foooooooooooooooooooooooooooooooooooooter -->
+<footer class="o1_footer1">
+  <div class="o1_footer_div_end1">
+    <div class="oend_text1">
+      <p>ITeams</p>
+    </div>
+    <div class="oend_svg1">
+        <img src="iteams-removebg-preview.png" alt="icon"  width="150px" >
+
+        
+    </div>
+    <div class="oend_icon1">
+       <!-- <p style="color: rgb(255, 255, 255); text-align: center; font-weight: bold;font-size: 35px; ">ITeams</p>-->
+        <ul class="ul_icon">
+            <li class="li_footer"><a class="a_footer" href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li class="li_footer"><a class="a_footer" href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li class="li_footer"><a class="a_footer" href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            <li  class="li_footer"><a class="a_footer"  href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+
+        </ul> 
+  </div>
+  </div>
+  <!-- ==================================== -->
+  <div class="o1_footer_div_end2">
+  <p>ITeams
+    <br>
+    موقع كلية تكنولوجيا المعلومات الخاص بالطلبة يتيح الوصول السهل للمعلومات والدروس، ويعزز التواصل بين الطلاب وأعضاء هيئة التدريس. تصميمه العصري والمحتوى الغني يجعلان منه أداة قيمة لدعم التجربة التعليمية.</p>
+  </div>
+  <!-- ==================================== -->
+  <div class="o1_footer_div_end3">
+    <p>
+      روابط مهمة للطالب:
+    </p>
+    <br>
+    <div class="o1_footer_a_end">
+      <a href="55.html">تواجد مشاكل تقنية</a>
+    <br>
+      <a href="https://aqaba.ju.edu.jo/ar/arabic/Home.aspx">صفحة الجامعة </a>
+      <br>
+      <a href="https://regapp.ju.edu.jo/selfregappaq/home.xhtml">بوابة الطالب</a>
+      <br>
+      <a href="66.html">للانضمام الينا</a>
+      <br>
+      <a href="https://juexams.com/moodle/">juexams</a>
+    </div>
+    </div>
+  <div class="o_end_end">
+    
+      <p>تم تطوير هذا المشروع من قبل فريق ITeams
+        <br>
+        جميع الحقوق محفوظة © 2024</p>
+     
+  </div>
+  
+    
+  </footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+     
+  <!-- ================================= -->
+  
+  
+  
+  
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  </body>
+  </html>
