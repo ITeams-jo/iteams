@@ -1022,9 +1022,22 @@ background-image:linear-gradient(to left,white,white);
 
         }
 .A2_slider {
-    background-image: url(Cyber-Security-Awareness.webp);
-    background-size:contain;
-    background-repeat:no-repeat;
+    /* background-size:contain;
+    background-repeat:no-repeat; */
+   width: 100%;
+   overflow: hidden;
+
+}
+.A2_slider img{
+    /* background-size:contain;
+    background-repeat:no-repeat; */
+   
+  min-width: 50%;
+  max-width: 80%;
+ overflow: hidden;
+  height: auto;
+  padding-bottom: 30px;
+
 }
 
 
