@@ -398,15 +398,14 @@ color: white;
 /* footer2 22222222222222222222222222222222222222 */
 .o_end_end
 {
-    height: 90px;
+    height: 95px;
     width: 100%;
     background-color: black;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     text-align: center;
-    padding-top: 10px;
 }
 .o_end_end p{
+    padding-top: 10px;
    width: 100%;
    /* padding: 80px 0 20px 0; */
     direction: rtl;
@@ -1069,4 +1068,13 @@ background-image:linear-gradient(to left,white,white);
 body{
     background:linear-gradient(#01b4c1,#00F0FF); 
 
+}
+.o_end_name{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.o_end_name:hover{
+    color: #407BFF;
+    text-shadow: 50px #0051ff;
+    text-decoration: underline rgb(164, 163, 163);
 }
