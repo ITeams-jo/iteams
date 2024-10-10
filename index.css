@@ -96,7 +96,7 @@ border: #095b66 1px solid;
         display:none;
         position: absolute;
         width: 100%;
-        top:122px;
+        top:120.5px;
         left:0;
         right: 0;
         background:linear-gradient(#088189,#1aa9b1);
@@ -195,7 +195,7 @@ width: 100%;
 text-align: center;
 font-size: 20px;
 direction: rtl;
-
+padding-left: 10px;
 }
 .o1_img1 {
    width: 100%;
@@ -218,7 +218,7 @@ width: 100%;
 text-align: center;
 font-size: 20px;
 direction: rtl;
-
+padding-right: 10px;
 }
 .o1_img2 {
    width: 100%;
@@ -241,6 +241,7 @@ width: 100%;
 text-align: center;
 font-size: 20px;
 direction: rtl;
+padding-left: 10px;
 
 }
 .o1_img3 {
@@ -961,15 +962,16 @@ color: rgb(255, 255, 255);
     align-items:flex-end;
     color: black;
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     width:100px;
     margin-top:10px;
     margin-left:auto;
     margin-right:auto;
-    background-image: linear-gradient(to left,#72F7FF,#53B3B9);
+    margin-top: 30%;
 }
 #A2_A:hover{
-background-image:linear-gradient(to left,white,white);
+color: white;
+background-color:#014c51;
 }
 .A2_Div {
     display: flex;
@@ -986,7 +988,8 @@ background-image:linear-gradient(to left,white,white);
 .A2_Div div {
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(to left,#00F0FF,#009099);
+    /* background-image: linear-gradient(to left,#00F0FF,#009099); */
+     background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
     border-radius: 10px;
     width: 250px;
     
