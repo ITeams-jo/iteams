@@ -833,10 +833,8 @@ color: rgb(255, 255, 255);
     align-items: center;
     /* background-color: #51CCF3; */
     background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
-
-    lol;
     width: 200px;
-    height: 162px;
+    height: 168px;
     text-align: center;
     border: 3px solid black;
     border-radius: 20px;
@@ -966,8 +964,6 @@ color: rgb(255, 255, 255);
 
 .A6_DIV {
     background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
-
-    lol;
     /* background-color: #51CCF3; */
     box-shadow: 2px 2px 2px grey;
     max-height: 3000px;
@@ -1017,7 +1013,6 @@ background-color:#014c51;
      background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
     border-radius: 10px;
     width: 250px;
-    lol;
     max-height:262px;
     padding: 5px;
     margin-left: 30px;
