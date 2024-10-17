@@ -833,7 +833,7 @@ color: rgb(255, 255, 255);
     align-items: center;
     /* background-color: #51CCF3; */
     background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
-    width: 200px;
+    width: 215px;
     height: 175px;
     text-align: center;
     border: 3px solid black;
@@ -849,7 +849,7 @@ color: rgb(255, 255, 255);
         color: black;
         border: 3px solid black;
         border-radius: 20px;
-        width:100px;
+        width:120px;
         margin-left:auto;
         margin-right:auto;
         margin-top: 25px;
