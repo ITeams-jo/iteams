@@ -821,7 +821,7 @@ color: rgb(255, 255, 255);
 .A6_DIV5 h3 {
     font-weight: bold;
     font-size: 30px;
-    background-color: #51CCF3;
+    background-color: #94e0f7;
     text-align: center;
     border: 3px solid black;
     border-radius: 10px;
@@ -831,7 +831,10 @@ color: rgb(255, 255, 255);
 .A6_DIV6 {
     justify-content: center;
     align-items: center;
-    background-color: #51CCF3;
+    /* background-color: #51CCF3; */
+    background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
+
+    lol;
     width: 200px;
     height: 162px;
     text-align: center;
@@ -842,17 +845,28 @@ color: rgb(255, 255, 255);
 
 }
     .A6_DIV6 a {
-        /* position: relative;
-        top: 45px; */
+        display:flex;
+        justify-content:center;
+        align-items:flex-end;
+        color: black;
+        border: 3px solid black;
+        border-radius: 20px;
+        width:100px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 25px;
+        /* /* position: relative;
+        top: 45px; 
         font-weight: bold;
         font-size: 25px;
         text-decoration: none;
         color: black;
-        border: 3px solid;
-        border-radius: 10px;
-        background-color: #51CCF3;
+        border:black  3px solid;
+        border-radius: 20px;
+        /* background-color: #51CCF3; 
         padding: 2px ; 
-    margin: 20px 0 0 0 ;  }
+    margin: 20px 0 0 0 ;  */
+ }
 
         .A6_DIV6 p {
             text-align: center;
@@ -865,7 +879,7 @@ color: rgb(255, 255, 255);
             color: black;
             /* border: 3px solid;
             border-radius: 10px; */
-            background-color: #51CCF3;
+            /* background-color: #51CCF3; */
             margin: 9px ;  
               }
 
@@ -876,7 +890,9 @@ color: rgb(255, 255, 255);
 
 
     .A6_DIV6 a:hover {
-    background-color: white;
+        color: white;
+        background-color:#014c51;
+    /* background-color: white; */
     }
     .A6_DIV6 h3 {
         font-weight: bold;
@@ -898,22 +914,28 @@ color: rgb(255, 255, 255);
 .A6_DIV3 p a {
     position: relative;
     top: 75px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 25px;
     text-decoration: none;
     color: black;
-    border: 3px solid;
+    border:black 3px solid;
     border-radius: 10px;
-    background-color: #51CCF3;
+    /* background-color: #51CCF3; */
     padding:2px;
 }
     .A6_DIV3 p a:hover{
-        background-color:white;
+        border:black 3px solid;
+
+        color: white;
+      background-color:#014c51;
+        /* background-color:white; */
     }
     .A6_DIV3 {
         justify-content: center;
         align-items: center;
-        background-color: #51CCF3;
+        background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
+
+        /* background-color: #51CCF3; */
         width: 200px;
         height: 250px;
         text-align: center;
@@ -943,7 +965,10 @@ color: rgb(255, 255, 255);
 }
 
 .A6_DIV {
-    background-color: #51CCF3;
+    background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
+
+    lol;
+    /* background-color: #51CCF3; */
     box-shadow: 2px 2px 2px grey;
     max-height: 3000px;
     border: 3px solid black;
@@ -992,8 +1017,8 @@ background-color:#014c51;
      background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
     border-radius: 10px;
     width: 250px;
-    
-    max-height:250px;
+    lol;
+    max-height:262px;
     padding: 5px;
     margin-left: 30px;
     margin-right: 30px;
