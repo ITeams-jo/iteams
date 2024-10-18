@@ -254,8 +254,8 @@ padding-left: 10px;
 /* foooooooooooooooooooooooooooooooooooooter */
 .o1_footer1{
     width: 100%;
-    min-height: 905px;
-    max-height: 1605px;
+    min-height: 900px;
+    max-height: 1600px;
     background-color: black;
     color: white;
     padding: 0;
@@ -310,7 +310,7 @@ color: #407BFF;
 /* ======================================== */
 .o1_footer_div_end2{
     /* background-color: #72F7FF; */
-    height: 609px;
+    height: 600px;
     width: 350px;
     padding-top: 80px;
     padding-bottom: 50px;
@@ -834,7 +834,7 @@ color: rgb(255, 255, 255);
     /* background-color: #51CCF3; */
     background-image: linear-gradient(to left,#8dd3d8,#ffffff74); 
     width: 215px;
-    height: 180px;
+    height: 175px;
     text-align: center;
     border: 3px solid black;
     border-radius: 20px;
